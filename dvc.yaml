@@ -1,0 +1,20 @@
+stages:
+  data-split:
+    cmd: python src/data-prep.py
+    deps:
+    - classy/
+    - src/data-prep.py
+
+  training:
+    cmd: python src/train_model.py
+    deps:
+      - classy/train_data
+      - classy/val_data
+      - src/train_model.py
+    params:
+      - training.epochs
+      - training.batch_size
+    
+    metrics:
+      - scores.json:
+          cache: false
