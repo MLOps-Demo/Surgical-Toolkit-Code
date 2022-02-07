@@ -4,4 +4,4 @@ opencv-python
 keras
 matplotlib
 sklearn
-yaml
+PyYAML
