@@ -88,6 +88,7 @@ def train():
     ,verbose=1)
     
     print(model.history.history.keys())
+    plt.subplot(1, 2, 1)
     plt.plot(model.history.history['accuracy'])
     plt.plot(model.history.history['val_accuracy'])
     plt.title('model accuracy')
@@ -96,7 +97,8 @@ def train():
     plt.legend(['train', 'test'], loc='upper left')
     plt.savefig('accuracy.png')
     #plt.show()
-
+    
+    plt.subplot(1, 2, 2)
     plt.plot(model.history.history['loss'])
     plt.plot(model.history.history['val_loss'])
     plt.title('model loss')
