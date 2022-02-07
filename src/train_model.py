@@ -123,7 +123,7 @@ def train():
 
     print("%s%s: %.2f%%" % ("loss ",model.metrics_names[0], scores[0]))
 
-    with open("./scores.json", "w") as fd:
+    with open("output/scores.json", "w") as fd:
         json.dump({"loss": scores[0], "accuracy": scores[1]}, fd, indent=4)
 
 if __name__ == '__main__':
