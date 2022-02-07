@@ -91,7 +91,7 @@ def train():
     plt.subplot(1, 2, 1)
     plt.plot(model.history.history['accuracy'])
     plt.plot(model.history.history['val_accuracy'])
-    plt.figure(figsize=(10,3))
+    #plt.figure(figsize=(10,3))
     plt.title('model accuracy')
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
